@@ -1,0 +1,169 @@
+/* font */
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+
+/* reset */
+h1,
+h2,
+p,
+input,
+button {
+    margin: 0;
+    padding: 0;
+}
+
+input {
+    border: 0;
+}
+
+button {
+    border: 0;
+}
+
+input,
+button {
+    font-family: 'Pretendard-Regular';
+    cursor: pointer;
+}
+
+body {
+    font-family: 'Pretendard-Regular';
+}
+
+
+/* css */
+html {
+    height: 100vh;
+}
+
+body {
+    background: var(--gradient2, radial-gradient(293.21% 130.49% at 3.59% 5.28%, #F0F4FF 0%, #A5B6EE 100%));
+}
+
+header {
+    padding: 72px 0 60px;
+    text-align: center;
+}
+
+.timer {
+    width: 400px;
+    height: 360px;
+    padding: 48px 44px 40px;
+    border-radius: 16px;
+    margin: 0 auto;
+    background: var(--gradient, linear-gradient(144deg, #5572BB 2.13%, #374B7C 102.97%));
+    color: #fff;
+    text-align: center;
+    box-shadow: 20px 20px 60px 10px rgba(55, 75, 124, 0.40);
+    box-sizing: border-box;
+}
+
+.timer h2 {
+    padding-bottom: 23px;
+    border-bottom: 1px solid #5B75B4;
+    box-shadow: inset 0 -1px #3D538A;
+}
+
+.time {
+    display: flex;
+    justify-content: center;
+    gap: 22px;
+    padding: 33px 0 40px;
+}
+
+.time p {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    position: relative;
+}
+
+.time p ~ p::before {
+    content: '';
+    display: inline-block;
+    width: 6px;
+    height: 26px;
+    background-image: url('./img/dot.svg');
+    position: absolute;
+    left: -17%;
+    top: 50%;
+}
+
+.time input {
+    width: 80px;
+    height: 80px;
+    border: 1px solid #354971;
+    border-radius: 5px;
+    background: linear-gradient(to left, #304577, #4C65A0);
+    color: #FFF;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.btns {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
+.startBtn,
+.resetBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 112px;
+    height: 48px;
+    border-radius: 50px;
+    background: #324577;
+    color: #617199;
+    font-size: 14px;
+    font-weight: 700;
+    box-shadow: 1px 1px 1px 0px rgba(0, 0, 0, 0.05) inset;
+}
+
+.startBtn.on {
+    background: #15C2B8;
+    color: #FFFFFF;
+}
+.resetBtn.on {
+    background: #FB7099;
+    color: #FFFFFF;
+}
+
+.startBtn::before,
+.resetBtn::before {
+    content: '';
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+}
+.startBtn::before {
+    background-image: url('./img/icon-start-disabled.svg');
+}
+.resetBtn::before {
+    background-image: url('./img/icon-reset-disabled.svg');
+}
+.startBtn.on::before {
+    background-image: url('./img/icon-start.svg');
+}
+.resetBtn.on::before {
+    background-image: url('./img/icon-reset.svg');
+}
+.startBtn.on.active::before {
+    background-image: url('./img/icon-stop.svg');
+}
+
+footer {
+    padding: 60px 0 103px;
+    color: #8596BF;
+    text-align: center;
+    font-size: 14px;
+}

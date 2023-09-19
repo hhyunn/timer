@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>timer</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div id="wrapper">
+        <header id="header">
+            <h1>
+                <img src="img/weniv-logo.svg" alt="weniv">
+            </h1>
+        </header>
+        <main id="main">
+            <div class="timer">
+                <h2>TIMER</h2>
+                <div class="time">
+                    <p>
+                        <label>HRS</label>
+                        <input type="number" value="00" id="hrs"/>
+                    </p>
+                    <p>
+                        <label>MIN</label>
+                        <input type="number" value="00" id="min"/>
+                    </p>
+                    <p>
+                        <label>SEC</label>
+                        <input type="number" value="00" id="sec"/>
+                    </p>
+                </div>
+                <p class="btns">
+                    <button type="button" class="startBtn">START</button>
+                    <button type="button" class="resetBtn">RESET</button>
+                </p>
+            </div>
+        </main>
+        <footer id="footer">
+            &copy; WENIV CORP.
+        </footer>
+
+        <script src="./index.js"></script>
+    </div>
+</body>
+</html>
